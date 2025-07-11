@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const rawPhone = params.get("phone") || "";
+    const doubleEncoded = encodeURIComponent(encodeURIComponent(rawPhone));
+    const target = `https://desk.zoho.com/agent/remedymeds/remedymeds/tickets/search?searchDept=currentDept&searchWord=${doubleEncoded}`;
+    window.location.href = target;
+  </script>
+</head>
+<body>
+  <p>Redirecting to Zoho Desk search…</p>
+</body>
+</html>
